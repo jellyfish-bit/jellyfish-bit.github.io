@@ -16,7 +16,7 @@ for (element of document.getElementsByClassName("fadein")) {
   observer.observe(element);
 }
 
-let prevScrollpos = wwindow.scrollY;
+let prevScrollpos = window.scrollY;
 let prevScrollposSmooth = window.scrollY + 50;
 
 const elementHeader = document.getElementById("header");
@@ -44,19 +44,15 @@ setTimeout(() => {
     }
     prevScrollpos = currentScrollPos;
   }
-}, 1000)
-window.onclick = function(event) {
+}, 4000)
+
+window.onclick = (event) => {
   if ((!event.target.matches('#menu-toggle') && 
   !event.target.matches('.menu-button'))) {
     closeDropDownMenu();
   }
 }
-document.addEventListener("touchend", (event) => {
-  if ((!event.target.matches('#menu-toggle') && 
-  !event.target.matches('.menu-button'))) {
-    closeDropDownMenu();
-  }
-})
+
 
 function workSelectedButton(pNumber) {
   for (const li of document.querySelectorAll('#ex-list>li')) {
