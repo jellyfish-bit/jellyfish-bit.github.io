@@ -50,8 +50,13 @@ window.onclick = function(event) {
   !event.target.matches('.menu-button'))) {
     closeDropDownMenu();
   }
-
 }
+document.addEventListener("touchend", (event) => {
+  if ((!event.target.matches('#menu-toggle') && 
+  !event.target.matches('.menu-button'))) {
+    closeDropDownMenu();
+  }
+})
 
 function workSelectedButton(pNumber) {
   for (const li of document.querySelectorAll('#ex-list>li')) {
