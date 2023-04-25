@@ -3,7 +3,7 @@
 
 :root {
   --white: #ededed;
-  --light-blue: #00f0d0;
+  --light-blue: #54e963;
   --dark-blue: #140e23;
   --blue: #231d31;
   --navy-gray: #495670;
@@ -17,7 +17,7 @@
 
   --xLoadOffset: calc(40vw - 19px);
 
-  /*--light-blue: #00abf0;
+  /*--light-blue: #00abf0 00f0d0;
  --dark-blue: #081b29; #00f088*/
 }
 
