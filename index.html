@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <div class="logo-line-box">
+    <span class="logo-line"></span>
+    <span class="logo-line"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div>
+      <a href="#" class="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+    <ul class="menu-list" id="menu-list">
+      <li><a href="#about-me" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Work</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <div class="nav-resume-div">
+          <a href="#" class="nav-resume">Resume</a>
+        </div>
+      </li>
+    </ul>
+  </header>
+
+  <div class="sidebar sidebar-left">
+    <ul class="sidebar-list">
+      <li>
+        <a href="#" class="sidebar-icon" aria-label="GitHub" target="_blank" rel="noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <title>GitHub</title>
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="sidebar-icon" aria-label="Instagram" target="_blank" rel="noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <title>LinkedIn</title>
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="sidebar sidebar-right">
+    <ul class="sidebar-list">
+      <li>
+        <a href="#" class="sidebar-mail">simon_kutscher@web.de</a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-content fadein">
+    <p class="home-heading-small">Hi, my name is</p>
+    <p class="home-heading-big">Simon Kutscher.</p>
+    <p class="home-heading-medium">I built things for the web.</p>
+    <p class="home-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Repudiandae dignissimos, porro fuga nihil quis culpa hic?
+      Doloremque sit harum molestias, at eum odio accusantium nam,
+      dolorem nihil ratione facere quasi!</p>
+    <p class="home-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Repudiandae dignissimos, porro fuga nihil quis culpa hic?
+      Doloremque sit harum molestias, at eum odio accusantium nam,
+      dolorem nihil ratione facere quasi!</p>
+  </section>
+
+  <section class="home-content fadein" id="about-me">
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2 class="content-heading">About me</h2>
+        <p class="about-me-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad expedita odio nobis, dignissimos mollitia
+          reiciendis fuga est dolore adipisci nemo aliquid voluptates accusantium numquam distinctio quod omnis illum
+          commodi.
+        </p>
+        <p class="about-me-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad expedita odio nobis, dignissimos mollitia
+          reiciendis fuga est dolore adipisci nemo aliquid voluptates accusantium numquam distinctio quod omnis illum
+          commodi.
+        </p>
+        <p class="about-me-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ad expedita odio nobis, dignissimos mollitia
+          reiciendis fuga est dolore adipisci nemo aliquid voluptates accusantium numquam distinctio quod omnis illum
+          commodi.
+        </p>
+        <ul class="about-me-skill-list">
+          <li>Java</li>
+          <li>Python</li>
+          <li>HTML, CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+      <div class="about-me-img">
+        <img width="500" height="500" class="image-me" src="" alt="head-shot">
+      </div>
+    </div>
+  </section>
+
+  <section class="home-content fadein" style="margin-left: 10vh;" id="experience">
+    <div class="experience">
+      <h2 class="content-heading">Where I've worked</h2>
+      <div class="ex-container">
+        <div class="experience-selection">
+          <ul class="ex-list" id="ex-list">
+            <li class="ex-list-item ex-item-active" id="ex-list-1" onclick="workSelectedButton(1)">
+              Ultra-Coral-Autsralia
+            </li>
+            <li class="ex-list-item" id="ex-list-2" onclick="workSelectedButton(2)">
+              Test 2
+            </li>
+            <li class="ex-list-item" id="ex-list-3" onclick="workSelectedButton(3)">
+              Test 3
+            </li>
+            <li class="ex-list-item" id="ex-list-4" onclick="workSelectedButton(4)">
+              Test 4
+            </li>
+          </ul>
+        </div>
+        <div class="experience-work">
+          <div class="ex-work-item" id="ex-work-item-1">
+            <h4 class="ex-work-item-heading">IT-Consultent <a href="#" class="ex-work-item-link">@
+                Ultra-Coral-Autsralia</a></h4>
+            <p class="ex-work-date">October 2022</p>
+            <ul class="ex-work-item-list">
+              <li>Lorem ipsum dolor sit amet consectetur,</li>
+              <li>Adipisicing elit. Molestias </li>
+              <li>Deleniti cupiditate delectus illo</li>
+              <li>Veritatis aut exercitationem sit facere</li>
+              <li>Aperiam sint reiciendis ullam minus deserunt
+                corporis asperiores ducimus? Illum</li>
+              <li>Atque quo</li>
+            </ul>
+          </div>
+          <div class="ex-work-item" id="ex-work-item-2" style="color: red; display: none;">
+            <p class="ex-work-item-test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, deleniti
+              cupiditate delectus illo, veritatis aut exercitationem sit facere, aperiam sint reiciendis ullam minus
+              deserunt corporis asperiores ducimus? Illum, atque quo!</p>
+          </div>
+          <div class="ex-work-item" id="ex-work-item-3" style="color: rebeccapurple;  display: none;">
+            <p class="ex-work-item-test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, deleniti
+              cupiditate delectus illo, veritatis aut exercitationem sit facere, aperiam sint reiciendis ullam minus
+              deserunt corporis asperiores ducimus? Illum, atque quo!</p>
+          </div>
+          <div class="ex-work-item" id="ex-work-item-4" style="color: yellow;  display: none;">
+            <p class="ex-work-item-test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, deleniti
+              cupiditate delectus illo, veritatis aut exercitationem sit facere, aperiam sint reiciendis ullam minus
+              deserunt corporis asperiores ducimus? Illum, atque quo!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-content fadein" id="projects">
+    <div class="projects">
+      <h2 class="content-heading">My projects</h2>
+      <ul class="pr-list">
+        <li>
+          <div class="pr-content">
+            <div>
+              <p class="pr-overline">Featured Project</p>
+              <h3 class="pr-title">
+                <a href="#" rel="noopener noreferrer" target="_blank">Jumpy Bird</a>
+              </h3>
+              <div class="pr-description">
+                <p>
+                  A fun little game. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <ul class="pr-tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+              </ul>
+              <div class="pr-links">
+                <a href="#" aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <title>GitHub</title>
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pr-image">
+            <a href="#">
+              <img src="image/Jumpy-bird-prev.png" alt="jumpy-bird-preview">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="pr-content pr-content-l">
+            <div>
+              <p class="pr-overline">Featured Project</p>
+              <h3 class="pr-title">
+                <a href="#" rel="noopener noreferrer" target="_blank">A Minecarft Mod</a>
+              </h3>
+              <div class="pr-description">
+                <p>
+                  A fun little add one for the really popular game Minecarf.
+                </p>
+              </div>
+              <ul class="pr-tech-list pr-tech-l">
+                <li>Java</li>
+              </ul>
+              <div class="pr-links pr-links-l">
+                <a href="#" aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <title>GitHub</title>
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pr-image pr-img-l">
+            <a href="#">
+              <img src="image/mc-mod-prev.png" alt="mc-mod-preview">
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-content fadein" id="contact">
+    <div class="contact">
+      <h3 class="contact-heading">Contact </h3>
+      <h1 class="contact-subheading">Get In Touch</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta id nostrum et officiis nisi neque similique,
+        consequatur, saepe fugiat non ducimus facere corporis tempore dolores ipsam accusamus deleniti cum obcaecati!
+      </p>
+      <div class="contact-email">
+        <a class="contact-email-link" href="mailto:simon_kutscher@web.de">Say Hi</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
