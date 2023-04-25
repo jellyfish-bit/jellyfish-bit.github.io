@@ -396,40 +396,7 @@ body {
 .sidebar-left {
   left: 0;
 }
-@media (max-width: 700px) {
-  .sidebar-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .sidebar {
-    display: flex;
-    max-width: 50%;
-    position: relative;
-    top: 0;
-  }
-  .sidebar > .sidebar-list {
-    flex-direction: row;
-    gap: 5px;
-    height: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    flex-wrap: nowrap;
-  }
-  .sidebar > .sidebar-list::after,
-  .sidebar > .sidebar-list::before {
-    width: 100%;
-    height: 1px;
-    background-color: var(--light-gray);
-    margin: 0;
-    animation: none;
 
-  }
-  .sidebar .sidebar-mail {
-    writing-mode: horizontal-tb;
-  }
-}
 
 .sidebar-list {
   display: flex;
@@ -502,7 +469,40 @@ body {
   transform: translate(0, -3px);
 }
 
+@media (max-width: 700px) {
+  .sidebar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .sidebar {
+    display: flex;
+    max-width: 50%;
+    position: relative;
+    top: 0;
+  }
+  .sidebar > .sidebar-list {
+    flex-direction: row;
+    gap: 5px;
+    height: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .sidebar > .sidebar-list::after,
+  .sidebar > .sidebar-list::before {
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-gray);
+    margin: 0;
+    animation: none;
 
+  }
+  .sidebar .sidebar-mail {
+    writing-mode: horizontal-tb;
+  }
+}
 
 .home-content {
   display: block;
@@ -702,17 +702,16 @@ body {
   }
   .experience-selection {
     display: block;
-    height: 25px;
     margin-bottom: 20px;
     overflow-x: auto;
     
   }
   .ex-list {
     overflow-y: scroll;
-    height: 25px;
     width: 100%;
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
     overscroll-behavior-x: contain;
@@ -721,10 +720,11 @@ body {
     
   }
   .ex-list-item {
-    display: block;
+    display: flex;
     width: max-content;
     border-left: 0px none !important;
     border-top: 1px solid var(--light-gray);
+    
   }
 }
 
