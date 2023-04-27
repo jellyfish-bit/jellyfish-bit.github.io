@@ -1,7 +1,5 @@
 const observer = new IntersectionObserver(entries => {
-  // Loop over the entries
   entries.forEach(entry => {
-    // If the element is visible
     if (entry.isIntersecting) {
       entry.target.classList.add('animation-fadein');
       return;
@@ -11,15 +9,17 @@ const observer = new IntersectionObserver(entries => {
   
   });
 });
-
-for (element of document.getElementsByClassName("fadein")) {
-  observer.observe(element);
-}
+const elementHeader = document.getElementById("header");
 
 let prevScrollpos = window.scrollY;
 let prevScrollposSmooth = window.scrollY + 50;
 
-const elementHeader = document.getElementById("header");
+// Visual
+for (element of document.getElementsByClassName("fadein")) {
+  observer.observe(element);
+}
+
+// Interaction
 setTimeout(() => {
   window.onscroll = () => {
     const currentScrollPos = window.scrollY;
@@ -46,12 +46,18 @@ setTimeout(() => {
   }
 }, 4000)
 
-window.onclick = (event) => {
+document.addEventListener("click", (event) => {
   if ((!event.target.matches('#menu-toggle') && 
   !event.target.matches('.menu-button'))) {
     closeDropDownMenu();
   }
-}
+});
+document.addEventListener("touchstart", (event) => {
+  if ((!event.target.matches('#menu-toggle') && 
+  !event.target.matches('.menu-button'))) {
+    closeDropDownMenu();
+  }
+});
 
 
 function workSelectedButton(pNumber) {
