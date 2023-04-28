@@ -15,7 +15,11 @@
   --content-space: 270px;
   --top-nav-size: 50px;
 
-  --xLoadOffset: calc(min(40vw, 400px) - 19px);
+  /* Also update other stuff 
+    -like 500px
+    -media querries
+  */
+  --xLoadOffset: calc(min(40vw, 500px) - 19px);
   --maxWidthPx: 1200px;
   
 
@@ -203,6 +207,7 @@ body {
     border-radius: 0  0 8px 8px;
     margin-top: calc(var(--top-nav-size) - 1px);
     width: 30%;
+    min-width: 120px;
     z-index: 10;
   }
   #menu-toggle ~ .menu-list li {
@@ -420,13 +425,12 @@ body {
 }
 @media (min-width: 1200px) {
   .sidebar-left {
-    left: calc(50% - 500px);
+    left: calc(50% - calc(var(--maxWidthPx) / 2));
   }
   .sidebar-right {
-    right: calc(50% - 500px);
+    right: calc(50% - calc(var(--maxWidthPx) / 2));
   }
 }
-
 
 .sidebar-list {
   display: flex;
