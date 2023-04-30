@@ -13,6 +13,10 @@ const elementHeader = document.getElementById("header");
 
 let prevScrollpos = window.scrollY;
 let prevScrollposSmooth = window.scrollY + 50;
+let linkScroll = false;
+let linkScollTime = setTimeout(() => {
+  linkScroll = false;
+}, 1000);
 
 // Visual
 for (element of document.getElementsByClassName("fadein")) {
@@ -25,7 +29,7 @@ setTimeout(() => {
     const currentScrollPos = window.scrollY;
 
     if (prevScrollpos >= currentScrollPos) {
-      
+
       showHeader();
       document.getElementById("menu-list").classList.remove("header-hide");
 
@@ -36,9 +40,9 @@ setTimeout(() => {
       document.getElementById("menu-list").classList.add("header-hide");
 
       prevScrollposSmooth = currentScrollPos;
-      closeDropDownMenu();
+      closeDropDownMenu(false);
     } else {
-      closeDropDownMenu();
+      closeDropDownMenu(false);
     }
     prevScrollpos = currentScrollPos;
   }
@@ -46,28 +50,29 @@ setTimeout(() => {
 }, 4000)
 
 document.addEventListener("click", (event) => {
-  if ((!event.target.matches('#menu-toggle') &&
-    !event.target.matches('.menu-button'))) {
-    closeDropDownMenu();
-  }
+  shouldHideNavMenu(event.target)
 });
 document.addEventListener("touchend", (event) => {
-
-  if (!event.target.matches('#menu-toggle') &&
-    !event.target.matches('.menu-button')) {
-    closeDropDownMenu();
-  }
+  shouldHideNavMenu(event.target);
 });
 
-
+function shouldHideNavMenu(pTarget) {
+  if (!window.matchMedia("(max-width: 700px)")) {
+    return;
+  }
+  if (!pTarget.matches('#menu-toggle') && !pTarget.matches('.menu-button') &&
+    !pTarget.matches('.nav-link') && !pTarget.matches('.nav-resume')
+    && !pTarget.matches('.menu-button-container')) {
+    closeDropDownMenu(false);
+  }
+}
 function mousemoveHeader(pEvent) {
   if (document.getElementById("menu-toggle").checked) {
-    if(window.matchMedia("(max-width: 700px)")) {
+    if (window.matchMedia("(max-width: 700px)")) {
       return;
     }
   }
-  if (pEvent.clientY < elementHeader.clientHeight * 2 ) {
-
+  if (pEvent.clientY < elementHeader.clientHeight * 2) {
     if (pEvent.clientY < elementHeader.clientHeight) {
       showHeader();
     } else if (pEvent.movementY > 0) {
@@ -89,7 +94,10 @@ function showWorkText(pNumber) {
   }
   document.getElementById("ex-work-item-" + pNumber).style.display = "block";
 }
-function closeDropDownMenu() {
+function closeDropDownMenu(pForce) {
+  if (linkScroll && !pForce) {
+    return;
+  }
   document.getElementById("menu-toggle").checked = false;
 }
 
@@ -98,8 +106,20 @@ function showHeader() {
   elementHeader.classList.add("header-show");
 }
 function hideHeader() {
+  if (linkScroll) {
+    return;
+  }
   elementHeader.classList.remove("header-show");
   elementHeader.classList.add("header-hide");
+}
+
+function toggleLinkScroll() {
+  linkScroll = true;
+  clearTimeout(linkScollTime);
+
+  linkScollTime = setTimeout(() => {
+    linkScroll = false;
+  }, 1000);
 }
 
 
