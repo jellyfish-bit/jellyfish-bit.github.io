@@ -394,7 +394,6 @@ body {
   0% {
     background-color: var(--light-blue);
   }
-
   15% {
     background-color: var(--dark-blue);
   }
@@ -795,7 +794,8 @@ body {
   align-self: center;
   max-width: 200px;
   max-height: 200px;
-
+  
+  
 }
 
 .about-me-skill-list {
@@ -829,13 +829,13 @@ body {
   font-size: 12px;
   line-height: 12px;
 }
-
-.image-me {
-  display: block;
+.image-me-background {
+  background-color: var(--light-blue);
   max-width: 200px;
   max-height: 200px;
-
-  border: 2px solid var(--light-blue);
+  width: 100%;
+  height: 100%;
+  display: flex;
   border-radius: 5px;
   z-index: 2;
   background-color: var(--light-blue);
@@ -843,10 +843,21 @@ body {
     var(--dark-blue) 20px 20px 0px -2px,
     var(--light-blue) 20px 20px;
   transition: 0.3s;
-
+}
+.image-me {
+  border-radius: 5px;
+  display: inline;
+  overflow: hidden;
+  object-fit: fill;
+  filter: grayscale(100%) contrast(1) brightness(90%) blur(0.9px);
+  mix-blend-mode: multiply;
+}
+.image-me:hover {
+  filter: none;
+  mix-blend-mode: normal;
 }
 
-.image-me:hover {
+.image-me-background:hover {
   background-color: var(--white);
   border-color: var(--white);
   transform: translate(-5px, -5px);
@@ -1155,8 +1166,6 @@ body {
   border-radius: 4px;
   vertical-align: middle;
   background-color: var(--light-blue);
-
-
 }
 
 .pr-image a::before {
@@ -1175,17 +1184,25 @@ body {
 
 .pr-image a img {
   object-fit: fill;
-  max-width: 100%;
+  width: 100%;
   min-width: 200px;
   min-height: 200px;
   mix-blend-mode: multiply;
   filter: grayscale(100%) contrast(1) brightness(90%) blur(0.9px);
+  
+  z-index: 11111;
+}
+.pr-image:hover img {
+  filter: unset;
+  mix-blend-mode: unset;
 
+  
 }
 
 .pr-image a:hover {
   background-color: transparent;
 }
+
 
 .contact {
   text-align: center;
