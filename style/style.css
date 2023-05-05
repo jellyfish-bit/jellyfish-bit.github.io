@@ -19,8 +19,9 @@
     -like 500px
     -media querries
   */
-  --xLoadOffset: calc(min(40vw, 500px) - 19px);
   --maxWidthPx: 1200px;
+  --xLoadOffset: calc(min(40vw, calc(1200px / 2)) - 19px);
+  
 
 
   /*--light-blue: #00abf0 00f0d0;
