@@ -1462,7 +1462,6 @@ body {
 
 .opr {
   padding: 25px;
-  border: 1px solid red;
 }
 .opr-heading {
   display: flex;
@@ -1492,7 +1491,10 @@ body {
   
   margin-top: 25px;  
   transition: 0.35s;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 15px;
 }
 .opr-list > li::before,
@@ -1539,25 +1541,26 @@ body {
   color: var(--primary-color);
 
 }
-.opr-link-wrapper {
-  text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+.opr-link {
+  z-index: 1;
+}
+.opr-link::before {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  left:0;
+  top:0;
   width: 100%;
   height: 100%;
-  border: 1px solid green;
 }
 
-.opr-link-wrapper > div {
+
+.opr-logo-wrapper {
   height: 75%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid yellow;
-
 }
 .opr-list > li footer {
   
@@ -1578,9 +1581,15 @@ body {
   font-weight: 400;
   font-size: 13px;
 }
+.opr-link-list {
+  position: relative;
+  z-index: 2;
+}
 .opr-link-list > li {
   width: 20px;
   height: 20px;
+  position: relative;
+  z-index: 2;
  
 }
 .opr-link-list a {
