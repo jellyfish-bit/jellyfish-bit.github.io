@@ -1671,50 +1671,16 @@ body {
 .calculator-logo > li:nth-child(4) {
   border-radius: 0 0 4px 0;
 }
-
-.logo-snake-food {
-  background-color: var(--primary-color);
-  width: 15px;
-  border-radius: 50%;
-  height: 15px;
-  
-  
-}
-.logo-snake-wrapper {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: flex-end;
-  align-content: center;
-  gap:30px;
-  flex-direction: column;
-}
 .logo-snake {
-  background-color: var(--primary-color);
-  width: 45px;
-  height: 15px;
-  position: relative;
+  height: 100%;
+  width: auto;
+
 }
-
-.logo-snake::after {
-  background-color: var(--primary-color);
-
-  width: 15px;
-  height: 30px;
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -15px;
+.logo-snake-primary {
+  fill: var(--primary-color)
 }
-.logo-snake::before {
-  background-color: var(--dark-blue);
-
-  width: 15px;
-  height: 15px;
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -15px;
+.logo-snake-contrast {
+  fill: var(--dark-blue)
 }
 
 
