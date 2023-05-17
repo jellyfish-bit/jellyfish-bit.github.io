@@ -1580,7 +1580,13 @@ body {
   color: var(--lighter-gray);
   font-weight: 400;
   font-size: 13px;
+  position: relative;
 }
+.opr-tech-list > li:not(:last-child)::after {
+  content: ",";
+  color: var(--primary-color);
+}
+
 .opr-link-list {
   position: relative;
   z-index: 2;
@@ -1671,7 +1677,7 @@ body {
 .calculator-logo > li:nth-child(4) {
   border-radius: 0 0 4px 0;
 }
-.logo-snake {
+.opr-logo-wrapper > svg {
   height: 100%;
   width: auto;
 
@@ -1681,6 +1687,20 @@ body {
 }
 .logo-snake-contrast {
   fill: var(--dark-blue)
+}
+.logo-jumpy-ai {
+  border: 3px solid var(--dark-navy-gray);
+  border-radius: 4px;
+}
+.logo-jumpy-ai-primary {
+  fill: var(--primary-color);
+  font-size: 10px;
+  font-family: var(--font-mono);
+}
+.logo-jumpy-ai-circle {
+  stroke-width: 1px;
+  stroke: var(--primary-color);
+  fill: none;
 }
 
 
