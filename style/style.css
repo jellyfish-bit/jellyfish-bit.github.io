@@ -863,8 +863,8 @@ body {
   border-radius: 5px;
   display: inline;
   overflow: hidden;
-  object-fit: fill;
-  filter: grayscale(100%) contrast(1) brightness(90%) blur(0.9px);
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1) brightness(90%);
   mix-blend-mode: multiply;
 }
 
